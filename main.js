@@ -67,17 +67,17 @@ const textureLoader = new THREE.TextureLoader();
 
 var sannyObj;
 
-loader.load('resources/sanny.obj',function(obj){
+loader.load('public/sanny.obj',function(obj){
     // Load and apply the main texture
-    var mainTexture = textureLoader.load('resources/textured_0_JDT9QVDR.jpg');
+    var mainTexture = textureLoader.load('public/textured_0_JDT9QVDR.jpg');
     var mainMaterial = new THREE.MeshStandardMaterial({ map: mainTexture });
 
     // Load and apply the normal map
-    var normalMap = textureLoader.load('resources/textured_0_norm_JDT9QVDR.jpg');
+    var normalMap = textureLoader.load('public/textured_0_norm_JDT9QVDR.jpg');
     mainMaterial.normalMap = normalMap;
 
     // Load and apply the ambient occlusion map
-    var occlusionMap = textureLoader.load('resources/textured_0_occl_JDT9QVDR.jpg');
+    var occlusionMap = textureLoader.load('public/textured_0_occl_JDT9QVDR.jpg');
     mainMaterial.aoMap = occlusionMap;
 
     // Assign the material to the model
